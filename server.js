@@ -10,10 +10,10 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
- app.use(express.static(path.join(__dirname))); // sirve todos los archivos en la misma ruta que el server
+app.use(express.static(path.join(__dirname))); // sirve todos los archivos en la misma ruta que el server
 
 // Usa process.env.API_KEY para obtener la clave de API
-const API_KEY = process.env.API_KEY;
+const API_KEY = "AIzaSyD6Pvo7xwMvhPwl3zrUfWe91lavdSvyTrk";
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
